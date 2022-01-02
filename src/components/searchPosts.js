@@ -6,6 +6,8 @@ import * as queryString from "query-string"
 
 import { rhythm } from "../utils/typography"
 
+import Posts from "./posts"
+
 const SearchBar = styled.div`
   display: flex;
   border: 1px solid #dfe1e5;
@@ -76,47 +78,6 @@ const SearchedPosts = ({ results }) =>
     </p>
   )
 
-const AllPosts = ({ posts }) => (
-  <div style={{ margin: "20px 0 40px" }}>
-    {posts.map(({ node }) => {
-      const title = node.frontmatter.title || node.fields.slug
-      const tags = node.frontmatter.tags ? node.frontmatter.tags : []
-      return (
-        <div key={node.fields.slug}>
-          <h3
-            style={{
-              marginBottom: rhythm(1 / 4),
-            }}
-          >
-            <Link style={{ boxShadow: `none` }} to={`/blog${node.fields.slug}`}>
-              {title}
-            </Link>
-          </h3>
-          <small>
-            {tags.map(tag => {
-              return (
-                <Link
-                  style={{ boxShadow: `none`, textDecoration: `none` }}
-                  to={`/tags/${tag}`}
-                >
-                  #{tag}
-                </Link>
-              )
-            })}
-          </small>
-          {tags.length !== 0 ? "  -  " : ""}
-          <small>{node.frontmatter.date}</small>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: node.frontmatter.description || node.excerpt,
-            }}
-          />
-        </div>
-      )
-    })}
-  </div>
-)
-
 const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
   const { search } = queryString.parse(location.search)
   const [query, setQuery] = useState(search || "")
@@ -150,7 +111,7 @@ const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
           }}
         />
       </SearchBar>
-      {query ? <SearchedPosts results={results} /> : <AllPosts posts={posts} />}
+      {query ? <SearchedPosts results={results} /> : <Posts posts={posts} />}
     </>
   )
 }
