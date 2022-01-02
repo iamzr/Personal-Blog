@@ -80,6 +80,7 @@ const AllPosts = ({ posts }) => (
   <div style={{ margin: "20px 0 40px" }}>
     {posts.map(({ node }) => {
       const title = node.frontmatter.title || node.fields.slug
+      const tags = node.frontmatter.tags ? node.frontmatter.tags : []
       return (
         <div key={node.fields.slug}>
           <h3
@@ -91,6 +92,19 @@ const AllPosts = ({ posts }) => (
               {title}
             </Link>
           </h3>
+          <small>
+            {tags.map(tag => {
+              return (
+                <Link
+                  style={{ boxShadow: `none`, textDecoration: `none` }}
+                  to={`/tags/${tag}`}
+                >
+                  #{tag}
+                </Link>
+              )
+            })}
+          </small>
+          {tags.length !== 0 ? "  -  " : ""}
           <small>{node.frontmatter.date}</small>
           <p
             dangerouslySetInnerHTML={{
