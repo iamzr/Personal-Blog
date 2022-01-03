@@ -5,7 +5,10 @@ import { FaHome } from "react-icons/fa"
 
 function Item({ to, name }) {
   return (
-    <Link style={{ boxShadow: `none`, marginRight: "1em" }} to={to}>
+    <Link
+      style={{ boxShadow: `none`, marginRight: "0.5em", marginLeft: "0.5em" }}
+      to={to}
+    >
       {name}
     </Link>
   )
@@ -54,9 +57,13 @@ function Navbar({ location, title }) {
           }}
         >
           <Item to="/blog/" name={home}></Item>
+          <Item to="/" name={`start here`}></Item>
+          {" | "}
           <Item to="/tags/fitness" name={`fitness`}></Item>
           <Item to="/tags/dev" name={`dev`}></Item>
           <Item to="/tags/study" name={`studying`}></Item>
+          {" | "}
+          <Item to="https://ziarehman.uk" name={`portfolio`}></Item>
         </nav>
       </React.Fragment>
     )
@@ -92,9 +99,13 @@ function Navbar({ location, title }) {
         //   }}
         >
           <Item to="/blog/" name={home}></Item>
+          <Item to="/" name={`start here`}></Item>
+          {" | "}
           <Item to="/tags/fitness" name={`fitness`}></Item>
           <Item to="/tags/dev" name={`dev`}></Item>
           <Item to="/tags/study" name={`studying`}></Item>
+          {" | "}
+          <Item to="https://ziarehman.uk" name={`portfolio`}></Item>
         </nav>
       </div>
     )
