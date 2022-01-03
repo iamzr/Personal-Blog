@@ -6,6 +6,8 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import Posts from "../components/posts"
+import Button from "../components/button"
 
 const Tags = ({ pageContext, data }) => {
   console.log(data)
@@ -27,19 +29,11 @@ const Tags = ({ pageContext, data }) => {
       >
         {`${totalCount} posts`}
       </p>
-      <ul>
-        {edges.map(({ node }) => {
-          const { slug } = node.fields
-          const { title } = node.frontmatter
-          return (
-            <li key={slug}>
-              <Link to={`/blog${slug}`}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      {/* This links to a page that does not yet exist! */}
-      <Link to="/tags">All tags</Link>
+      <Posts posts={edges}></Posts>
+
+      <Link to="/tags">
+        <Button>All tags</Button>
+      </Link>
     </Layout>
   )
 }
@@ -84,11 +78,15 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          excerpt
           fields {
             slug
           }
           frontmatter {
+            date(formatString: "MMMM DD, YYYY")
             title
+            tags
+            description
           }
         }
       }

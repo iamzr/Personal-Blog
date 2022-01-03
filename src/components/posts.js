@@ -22,7 +22,11 @@ const Posts = ({ posts }) => (
             {tags.map(tag => {
               return (
                 <Link
-                  style={{ boxShadow: `none`, textDecoration: `none` }}
+                  style={{
+                    boxShadow: `none`,
+                    textDecoration: `none`,
+                    marginRight: `0.4em`,
+                  }}
                   to={`/tags/${tag}`}
                 >
                   #{tag}
@@ -30,7 +34,7 @@ const Posts = ({ posts }) => (
               )
             })}
           </small>
-          {tags.length !== 0 ? "  -  " : ""}
+          {tags.length !== 0 ? "-  " : ""}
           <small>{node.frontmatter.date}</small>
           <p
             dangerouslySetInnerHTML={{
