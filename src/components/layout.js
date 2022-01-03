@@ -23,7 +23,8 @@ class Layout extends React.Component {
           <main>{children}</main>
         </div>
         <Footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()} Zia Rehman | Hosted on{" "}
+          <a href="https://www.netlify.com">Netlify</a> | Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Footer>
