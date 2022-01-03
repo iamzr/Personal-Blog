@@ -37,7 +37,7 @@ const Tags = ({ pageContext, data }) => {
       </p>
       <Posts posts={edges}></Posts>
 
-      <Link to="/blog">
+      <Link to="/blog/">
         <Button>All Posts</Button>
       </Link>
     </Layout>
