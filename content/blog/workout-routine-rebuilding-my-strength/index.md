@@ -1,8 +1,7 @@
 ---
-title: Workout Routine: Rebuilding My Strength
-date: "2019-10-22"
-description: "A post showing MDX in action"
-tags: ["fitness", "workout routine", "calisthenics", "gym"]
+title: "Workout Routine: Rebuilding Strength"
+date: "2021-07-03"
+tags: ["fitness", "workoutRoutine", "calisthenics", "gym"]
 published: true
 ---
 

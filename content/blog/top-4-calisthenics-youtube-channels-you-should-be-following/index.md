@@ -1,6 +1,6 @@
 ---
-title: Top 4 Calisthenics YouTube channels you should be following!
-date: "2015-05-28T22:40:32.169Z"
+title: Top 4 Calisthenics YouTube Channels You Should be Following!
+date: "2021-07-17"
 tags: ["calisthenics", "fitness"]
 published: true
 ---

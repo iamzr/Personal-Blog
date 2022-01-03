@@ -1,7 +1,6 @@
 ---
 title: Starting off at the gym routine!
 date: "2019-10-22"
-description: "A post showing MDX in action"
 tags: []
 published: false
 ---
