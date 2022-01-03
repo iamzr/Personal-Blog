@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
-import Navbar from "../components/navbar"
 
 class IndexPage extends React.Component {
   render() {
