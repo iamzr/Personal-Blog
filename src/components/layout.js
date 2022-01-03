@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
+import Navbar from "./navbar"
 
 class Layout extends React.Component {
   render() {
@@ -16,7 +17,7 @@ class Layout extends React.Component {
         <h1
           style={{
             ...scale(1.5),
-            marginBottom: rhythm(1.5),
+            marginBottom: rhythm(0.5),
             marginTop: 0,
           }}
         >
@@ -64,6 +65,7 @@ class Layout extends React.Component {
           }}
         >
           <header>{header}</header>
+          <Navbar></Navbar>
           <main>{children}</main>
         </div>
         <Footer>
