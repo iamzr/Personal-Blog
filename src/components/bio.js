@@ -34,7 +34,8 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong>.{``}
+              Written by <strong>{author}</strong>. Developer, Calisthenics
+              Athlete, Student of Math and now a Blogger too! {``}
             </p>
           </Container>
         )
