@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import { scale, rhythm } from "../utils/typography"
+import { FaHome } from "react-icons/fa"
 
 function Item({ to, name }) {
   return (
@@ -14,6 +15,11 @@ function Navbar({ location, title }) {
   const rootPath = `${__PATH_PREFIX__}/`
   const blogPath = `${__PATH_PREFIX__}/blog/`
   let navbar
+  const home = (
+    <span style={{ verticalAlign: "text-bottom", lineHeight: "1em" }}>
+      <FaHome size={20}></FaHome>
+    </span>
+  )
 
   if (location.pathname === rootPath || location.pathname === blogPath) {
     navbar = (
@@ -47,10 +53,10 @@ function Navbar({ location, title }) {
             marginBottom: rhythm(1),
           }}
         >
-          <Item to="/blog/" name={`home`}></Item>
+          <Item to="/blog/" name={home}></Item>
           <Item to="/tags/fitness" name={`fitness`}></Item>
           <Item to="/tags/dev" name={`dev`}></Item>
-          <Item to="/tags/uni" name={`uni`}></Item>
+          <Item to="/tags/study" name={`studying`}></Item>
         </nav>
       </React.Fragment>
     )
@@ -85,10 +91,10 @@ function Navbar({ location, title }) {
         //     marginBottom: rhythm(1),
         //   }}
         >
-          <Item to="/blog/" name={`home`}></Item>
+          <Item to="/blog/" name={home}></Item>
           <Item to="/tags/fitness" name={`fitness`}></Item>
           <Item to="/tags/dev" name={`dev`}></Item>
-          <Item to="/tags/uni" name={`uni`}></Item>
+          <Item to="/tags/study" name={`studying`}></Item>
         </nav>
       </div>
     )
