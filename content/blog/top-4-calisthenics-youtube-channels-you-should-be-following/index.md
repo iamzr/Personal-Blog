@@ -2,6 +2,7 @@
 title: Top 4 Calisthenics YouTube channels you should be following!
 date: "2015-05-28T22:40:32.169Z"
 tags: ["calisthenics", "fitness"]
+published: true
 ---
 
 So you're into calisthenics, maybe you're a beginner just starting to workout for the first time, maybe you're a seasoned calisthenics athlete, maybe you've made the switch from some other strength sports to calisthenics! Either way, these are some of the top YouTube channels to check out! Learn how to become stronger than ever before, discover progressions to unlock those calisthenics skills and get motivated for training! (Or if you need some content to binge watch these are my recommendations!)
