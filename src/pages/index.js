@@ -37,8 +37,8 @@ class IndexPage extends React.Component {
             and planche
           </li>
           <li>
-            Student of Math with a Masters in Mathametics from the University of
-            Nottingham. I studied a lot of pure and mathematical physics. I'd
+            Student of Maths with a Masters in Mathametics from the University
+            of Nottingham. I studied a lot of pure and mathematical physics. I'd
             like to say I spend my free time reading up on topics like Category
             Theory, but that just wouldn't be entirely true
           </li>
