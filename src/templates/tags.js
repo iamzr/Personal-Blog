@@ -18,7 +18,13 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout location={`/tags/${tag}`} title={siteTitle}>
       <SEO title={tag} />
-      <h1>{tag}</h1>
+      <h1
+        style={{
+          marginTop: 0,
+        }}
+      >
+        {tag}
+      </h1>
       <p
         style={{
           ...scale(-1 / 5),
@@ -31,8 +37,8 @@ const Tags = ({ pageContext, data }) => {
       </p>
       <Posts posts={edges}></Posts>
 
-      <Link to="/tags">
-        <Button>All tags</Button>
+      <Link to="/blog">
+        <Button>All Posts</Button>
       </Link>
     </Layout>
   )
